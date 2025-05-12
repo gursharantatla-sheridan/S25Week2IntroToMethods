@@ -23,7 +23,30 @@
             Console.WriteLine("str = " + str);
             Console.WriteLine("radius = " + c1.radius);
             Console.WriteLine("arr[0] = " + arr[0]);
+
+            Console.WriteLine("\n\n");
+
+
+
+            // output parameter example
+            double r = 5;
+            //double circum, area;
+
+            CalculateCircumAndArea(r, out double circum, out double area);
+
+            Console.WriteLine("Circumference = " + circum.ToString("F2"));
+            Console.WriteLine("Area = " + area.ToString("F2"));
         }
+
+        // output parameters example
+        static void CalculateCircumAndArea(double r, out double circum, out double area)
+        {
+            circum = 2 * Math.PI * r;
+            area = Math.PI * r * r;
+        }
+
+
+
 
         static void ChangeValue(ref int n, string s, Circle c, int[] a)
         {
