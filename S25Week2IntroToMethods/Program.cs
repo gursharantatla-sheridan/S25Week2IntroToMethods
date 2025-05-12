@@ -16,7 +16,7 @@
             Console.WriteLine("radius = " + c1.radius);
             Console.WriteLine("arr[0] = " + arr[0]);
 
-            ChangeValue(num, str, c1, arr);
+            ChangeValue(ref num, str, c1, arr);
 
             Console.WriteLine("\n\nAfter changes:\n");
             Console.WriteLine("num = " + num);
@@ -25,7 +25,7 @@
             Console.WriteLine("arr[0] = " + arr[0]);
         }
 
-        static void ChangeValue(int n, string s, Circle c, int[] a)
+        static void ChangeValue(ref int n, string s, Circle c, int[] a)
         {
             n = 100;
             s = "bye";
